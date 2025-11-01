@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de uniformes escolares ZERO GRAUS. Camisas, camisetas, calças e roupas de segurança.">
+    <title>Produtos - ZERO GRAUS</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
+    <link rel="stylesheet" href="./css/produtos.css">
+    <link rel="stylesheet" href="./css/products-enhanced.css">
+    <link rel="stylesheet" href="./css/products-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="./images/logos/logo.png" alt="ZERO GRAUS Logo" class="logo-img">
+                </a>
+                
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="produtos.html" class="nav-link active">Produtos</a>
+                    <a href="fazer-pedido.html" class="nav-link">Fazer Pedido</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="ri-sun-line"></i>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="ri-shopping-bag-line"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Nossos Produtos</h1>
+                <p class="hero-subtitle">Encontre os melhores uniformes escolares com qualidade e conforto para todos os níveis de ensino</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-container">
+                <div class="search-filter-inner">
+                    <!-- Category Filters -->
+                    <div class="category-filters" id="categoryFilters">
+                        <button type="button" class="filter-option active" data-category="todos">
+                            <i class="ri-apps-line"></i>
+                            <span>Todos</span>
+                        </button>
+                        <button type="button" class="filter-option" data-category="camisas">
+                            <i class="ri-t-shirt-line"></i>
+                            <span>Camisas</span>
+                        </button>
+                        <button type="button" class="filter-option" data-category="calcas">
+                            <i class="ri-pants-line"></i>
+                            <span>Calças</span>
+                        </button>
+                        <button type="button" class="filter-option" data-category="conjuntos">
+                            <i class="ri-t-shirt-2-line"></i>
+                            <span>Conjuntos</span>
+                        </button>
+                        <button type="button" class="filter-option" data-category="acessorios">
+                            <i class="ri-shopping-bag-3-line"></i>
+                            <span>Acessórios</span>
+                        </button>
+                        <button type="button" class="filter-option" data-category="calcados">
+                            <i class="ri-shoe-line"></i>
+                            <span>Calçados</span>
+                        </button>
+                        <button type="button" class="filter-option" data-category="uniformes">
+                            <i class="ri-t-shirt-air-line"></i>
+                            <span>Uniformes</span>
+                        </button>
+                    </div>
+
+                    <!-- Search and Sort -->
+                    <div class="search-sort-container">
+                        <div class="search-container">
+                            <div class="search-box">
+                                <i class="ri-search-line search-icon"></i>
+                                <input type="text" id="searchInput" class="search-input" placeholder="Buscar produtos...">
+                                <button class="clear-search" id="clearSearch" aria-label="Limpar busca">
+                                    <i class="ri-close-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="sort-container">
+                            <span class="sort-label">Ordenar por:</span>
+                            <div class="select-wrapper">
+                                <select id="sortBy" class="sort-select">
+                                    <option value="featured">Destaques</option>
+                                    <option value="price-asc">Preço: Menor para Maior</option>
+                                    <option value="price-desc">Preço: Maior para Menor</option>
+                                    <option value="name-asc">Nome: A-Z</option>
+                                    <option value="name-desc">Nome: Z-A</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line select-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn" id="prevPage" disabled>
+                    <i class="ri-arrow-left-line"></i> Anterior
+                </button>
+                <div class="page-numbers" id="pageNumbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-number">5</button>
+                </div>
+                <button class="pagination-btn" id="nextPage">
+                    Próximo <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" id="chatToggle">
+            <i class="ri-message-3-line"></i>
+        </button>
+        
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Assistência ZERO GRAUS</h3>
+                <button class="chat-close" id="chatClose">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    <p>Olá! 👋 Como posso ajudá-lo hoje?</p>
+                    <div class="chat-options">
+                        <button class="chat-option" data-action="produtos">Ver Produtos</button>
+                        <button class="chat-option" data-action="pedido">Fazer Pedido</button>
+                        <button class="chat-option" data-action="bordados">Bordados/Estampagens</button>
+                        <button class="chat-option" data-action="whatsapp">Falar no WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+                <button id="chatSend">
+                    <i class="ri-send-plane-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- ImagesLoaded for masonry -->
+    <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+    
+    <!-- Masonry Layout -->
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    
+    <!-- Main Scripts (load in correct order) -->
+    <script src="./js/main.js"></script>
+    <script src="./js/products-data.js"></script>
+    <script src="./js/advanced-filters.js"></script>
+    <script src="./js/init-filters.js"></script>
+    <script src="./js/products-enhanced.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+</html>

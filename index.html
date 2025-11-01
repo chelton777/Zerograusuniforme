@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZERO GRAUS - Uniformes Escolares em Moçambique. Uniformes para ensino primário e secundário, bordados, estampagens e roupas de segurança.">
+    <meta name="keywords" content="uniformes escolares, moçambique, maputo, bordados, estampagens, roupas segurança, zero graus, uniformes primário, uniformes secundário">
+    <meta name="author" content="ZERO GRAUS">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://zerograus.co.mz">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zerograus.co.mz">
+    <meta property="og:title" content="ZERO GRAUS - Uniformes Escolares Moçambique">
+    <meta property="og:description" content="Uniformes escolares de qualidade para ensino primário e secundário. Bordados e estampagens personalizadas. Entrega em todo Moçambique.">
+    <meta property="og:image" content="https://zerograus.co.mz/public/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="ZERO GRAUS">
+    <meta property="og:locale" content="pt_MZ">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zerograus.co.mz">
+    <meta name="twitter:title" content="ZERO GRAUS - Uniformes Escolares Moçambique">
+    <meta name="twitter:description" content="Uniformes escolares de qualidade para ensino primário e secundário. Bordados e estampagens personalizadas.">
+    <meta name="twitter:image" content="https://zerograus.co.mz/public/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./public/favicon.png">
+    <link rel="apple-touch-icon" href="./public/apple-touch-icon.png">
+    
+    <title>ZERO GRAUS - Uniformes Escolares Moçambique | Bordados e Estampagens</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- CSS Inline Modern (evita dependências externas ausentes) -->
+    <style>
+      :root {
+        --bg: #0f1115;
+        --bg-soft: #131722;
+        --text: #f7f7f7;
+        --muted: #9aa4b2;
+        --primary: #0a84ff;
+        --primary-600: #0066cc;
+        --card: #111319;
+        --border: #232838;
+        --radius: 12px;
+        --container: 1200px;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: "Geist", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
+      .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+      /* Header */
+      .header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(12px); background: rgba(15,17,21,0.6); border-bottom: 1px solid var(--border); }
+      .header-content { display: flex; align-items: center; justify-content: space-between; height: 100px; }
+      .logo-img { height: 100px; width: auto; object-fit: contain; }
+      .nav { display: none; gap: 24px; }
+      .nav-link { font-weight: 600; font-size: 14px; opacity: 0.9; padding: 8px 4px; position: relative; }
+      .nav-link:hover::after, .nav-link.active::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-600)); border-radius: 999px; }
+      .header-actions { display: flex; align-items: center; gap: 10px; }
+      .theme-toggle, .cart-btn, .mobile-menu-btn { height: 40px; width: 40px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); display: grid; place-items: center; cursor: pointer; transition: transform .15s ease, background .2s ease; }
+      .theme-toggle:hover, .cart-btn:hover, .mobile-menu-btn:hover { transform: translateY(-2px); background: #0e1118; }
+      .cart-btn { position: relative; }
+      .cart-count { position: absolute; top: -6px; right: -6px; height: 18px; min-width: 18px; padding: 0 5px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 11px; display: grid; place-items: center; font-weight: 700; }
+      @media (min-width: 900px) { .nav { display: flex; } .mobile-menu-btn { display:none; } }
+
+      /* Mega Menu */
+      .nav-link-wrapper { position: relative; }
+      .mega-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 600px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-top: 12px; opacity: 0; pointer-events: none; transition: opacity .25s ease, margin-top .25s ease; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+      .nav-link-wrapper:hover .mega-menu { opacity: 1; pointer-events: auto; margin-top: 8px; }
+      .mega-menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .mega-menu-item { padding: 10px 12px; border-radius: 8px; border: 1px solid transparent; transition: all .2s ease; }
+      .mega-menu-item:hover { background: var(--card); border-color: var(--border); }
+      .mega-menu-item h4 { margin: 0 0 4px; font-size: 14px; }
+      .mega-menu-item p { margin: 0; font-size: 12px; color: var(--muted); }
+
+      /* Search Bar */
+      .search-bar { position: relative; width: 280px; display: none; }
+      @media (min-width: 900px) { .search-bar { display: block; } }
+      .search-input { width: 100%; height: 40px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 0 40px 0 16px; font-size: 14px; }
+      .search-input:focus { outline: none; border-color: var(--primary); }
+      .search-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+
+      /* Mobile drawer */
+      .mobile-drawer { position: fixed; inset: 0 0 0 auto; width: 78%; max-width: 360px; background: var(--bg-soft); border-left: 1px solid var(--border); transform: translateX(100%); transition: transform .3s ease; z-index: 60; display: flex; flex-direction: column; padding: 24px; gap: 12px; }
+      .mobile-drawer.open { transform: translateX(0); }
+      .mobile-link { padding: 12px 4px; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); opacity: 0; pointer-events: none; transition: opacity .3s ease; z-index: 55; }
+      .drawer-overlay.open { opacity: 1; pointer-events: auto; }
+
+      /* Hero */
+      /* Hero Section */
+      .hero-section { 
+        position: relative; 
+        height: 80vh; 
+        min-height: 600px; 
+        max-height: 1000px; 
+        overflow: hidden; 
+        background: #000; 
+      }
+      .hero-container { 
+        position: relative; 
+        height: 100%; 
+        width: 100%; 
+      }
+      .hero-media { 
+        position: absolute; 
+        inset: 0; 
+        z-index: 1; 
+      }
+      .hero-gif { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        object-position: center; 
+      }
+      .hero-overlay { 
+        position: absolute; 
+        inset: 0; 
+        background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
+        z-index: 2;
+      }
+      .hero-content { 
+        position: relative; 
+        z-index: 3; 
+        height: 100%;
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: flex-start;
+        padding: 0 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .hero-title { 
+        font-size: clamp(40px, 7vw, 88px); 
+        line-height: 1.1; 
+        margin: 0 0 16px; 
+        letter-spacing: -0.02em; 
+        color: #ffffff; 
+        font-weight: 800; 
+        text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
+        max-width: 800px; 
+      }
+      .hero-subtitle { 
+        font-size: clamp(16px, 2.4vw, 24px); 
+        margin: 0 0 32px; 
+        color: #ffffff; 
+        text-shadow: 0 2px 10px rgba(0,0,0,0.8); 
+        max-width: 600px; 
+        line-height: 1.5; 
+        opacity: 0.95;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--border); font-weight: 700; letter-spacing: .02em; }
+      .btn-primary { background: var(--primary); color: #fff; border-color: transparent; }
+      .btn-primary:hover { background: var(--primary-600); }
+      .btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.25); }
+      .btn-secondary:hover { background: rgba(255,255,255,.08); }
+      .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
+      .btn-outline:hover { border-color: var(--primary); color: #fff; }
+      .btn-block { width: 100%; }
+      .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+      .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); height: 48px; width: 48px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.4); color: #fff; display: grid; place-items: center; cursor: pointer; }
+      .carousel-prev { left: 16px; }
+      .carousel-next { right: 16px; }
+      .carousel-dots { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
+      .carousel-dots button { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.5); border: none; }
+      .carousel-dots button.active { width: 22px; background: #fff; }
+
+      /* Sections */
+      .section-title { font-size: clamp(22px, 3vw, 34px); margin: 0 0 16px; }
+      .services { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 0; }
+      .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      @media (min-width: 900px) { .services-grid { grid-template-columns: repeat(4, 1fr); } }
+      .service-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; display: grid; gap: 6px; place-items: start; transition: transform .2s ease, background .2s ease; }
+      .service-card:hover{ transform: translateY(-4px); background: #0f131c; }
+      .service-icon { height: 44px; width: 44px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(180deg, var(--primary), var(--primary-600)); color: #fff; }
+
+      .categories { padding: 36px 0; }
+      .category-nav { display: flex; flex-wrap: wrap; gap: 10px; }
+      .category-btn { height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; font-weight: 600; }
+      .category-btn.active, .category-btn:hover { border-color: var(--primary); }
+
+      .products { padding: 42px 0; }
+      .products-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+      .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      @media (min-width: 900px) { .products-grid { grid-template-columns: repeat(4, 1fr); } }
+      .product-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; position: relative; cursor: pointer; }
+      .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+      .product-media { aspect-ratio: 1 / 1; background: #0d0f15; position: relative; overflow: hidden; }
+      .product-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+      .product-card:hover .product-media img { transform: scale(1.05); }
+      .product-badge { position: absolute; top: 8px; left: 8px; padding: 4px 10px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; z-index: 2; }
+      .product-info { padding: 12px; display: grid; gap: 6px; }
+      .product-name { font-weight: 600; font-size: 14px; margin: 0; }
+      .product-category { font-size: 12px; color: var(--muted); margin: 0; }
+      .price { color: var(--text); font-weight: 700; font-size: 16px; }
+      .quick-view { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%) translateY(20px); opacity: 0; transition: all .25s ease; }
+      .product-card:hover .quick-view { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+      .cta-section { padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: linear-gradient(180deg, rgba(10,132,255,.05), rgba(10,132,255,0) 60%); }
+      .cta-content { text-align: center; display: grid; gap: 14px; }
+      .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+      /* Footer */
+      .footer { background: var(--bg-soft); border-top: 1px solid var(--border); }
+      .footer-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 24px; padding: 28px 0; }
+      @media (min-width: 900px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+      .footer-col h4 { margin: 0 0 12px; }
+      .footer-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+      .footer-logo { height: 44px; width: auto; border-radius: 8px; }
+      .social-links { display: flex; gap: 10px; }
+      .social-links a { height: 40px; width: 40px; border-radius: 999px; display: grid; place-items: center; background: var(--card); border: 1px solid var(--border); }
+      .footer-bottom { border-top: 1px solid var(--border); padding: 18px 0; text-align: center; color: var(--muted); }
+
+      /* Chat + Cart placeholders (mantidos, mas discretos) */
+      .chat-widget { position: fixed; bottom: 18px; right: 18px; z-index: 70; }
+      .chat-toggle { height: 52px; width: 52px; border-radius: 999px; border: 1px solid var(--border); background: var(--primary); color: #fff; display: grid; place-items: center; box-shadow: 0 10px 30px rgba(10,132,255,.35); }
+      .chat-window { display: none; position: fixed; right: 18px; bottom: 80px; width: min(360px, 90vw); background: var(--bg-soft); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+      .chat-window.open { display: grid; grid-template-rows: auto 1fr auto; }
+      .chat-header, .cart-header { padding: 12px 14px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+      .chat-body { padding: 12px 14px; max-height: 50vh; overflow: auto; }
+      .chat-footer { padding: 10px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
+      .chat-footer input { flex: 1; height: 40px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 0 12px; }
+
+      .cart-sidebar { position: fixed; top: 0; right: 0; height: 100%; width: min(420px, 90vw); background: var(--bg-soft); border-left: 1px solid var(--border); transform: translateX(100%); transition: transform .3s ease; z-index: 80; display: flex; flex-direction: column; }
+      .cart-sidebar.open { transform: translateX(0); }
+      .cart-body { flex: 1; overflow: auto; padding: 12px; }
+      .cart-footer { border-top: 1px solid var(--border); padding: 12px; background: var(--bg-soft); }
+      .cart-overlay { position: fixed; inset:0; background: rgba(0,0,0,.5); opacity:0; pointer-events:none; transition: opacity .3s ease; z-index: 75; }
+      .cart-overlay.open { opacity:1; pointer-events:auto; }
+
+      /* Featured Stories Section */
+      .featured-stories { padding: 48px 0; background: var(--bg); }
+      .stories-carousel { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+      .stories-carousel::-webkit-scrollbar { height: 6px; }
+      .stories-carousel::-webkit-scrollbar-track { background: transparent; }
+      .stories-carousel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+      .story-card { min-width: 320px; max-width: 400px; flex: 0 0 auto; scroll-snap-align: start; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform .2s ease; cursor: pointer; }
+      .story-card:hover { transform: translateY(-4px); }
+      .story-media { height: 240px; background: #0d0f15; position: relative; overflow: hidden; }
+      .story-media img { width: 100%; height: 100%; object-fit: cover; }
+      .story-content { padding: 16px; }
+      .story-tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+      .story-title { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+      .story-desc { font-size: 14px; color: var(--muted); margin: 0 0 12px; line-height: 1.5; }
+      .story-link { color: var(--primary); font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 4px; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="./images/logos/logo.png" alt="ZERO GRAUS Logo" class="logo-img">
+                </a>
+                
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link active">Início</a>
+                    <a href="produtos.html" class="nav-link">Produtos</a>
+                    <a href="fazer-pedido.html" class="nav-link">Fazer Pedido</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                </nav>
+                
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Buscar produtos..." id="searchInput">
+                    <i class="ri-search-line search-icon"></i>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="ri-sun-line"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-media">
+                <img src="./images/hero/uniforme%20escolar.gif" alt="Uniformes Escolares Zero Graus" class="hero-gif" loading="eager">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">ZERO GRAUS</h1>
+                <p class="hero-subtitle">Uniformes Escolares de Qualidade para o Futuro de Moçambique</p>
+                <div class="hero-ctas">
+                    <a href="produtos.html" class="btn btn-primary">Ver Coleção Completa</a>
+                    <a href="fazer-pedido.html" class="btn btn-secondary">Fazer Pedido</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="ri-shirt-line"></i>
+                    </div>
+                    <h3>Uniformes Escolares</h3>
+                    <p>Primário e Secundário</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="ri-brush-line"></i>
+                    </div>
+                    <h3>Bordados</h3>
+                    <p>Personalização de qualidade</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="ri-printer-line"></i>
+                    </div>
+                    <h3>Estampagens</h3>
+                    <p>Designs personalizados</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="ri-shield-check-line"></i>
+                    </div>
+                    <h3>Roupas de Segurança</h3>
+                    <p>Proteção profissional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Categorias</h2>
+            <div class="category-nav">
+                <button class="category-btn active" data-category="todos">Todos</button>
+                <button class="category-btn" data-category="camisas">Camisas</button>
+                <button class="category-btn" data-category="camisetas">Camisetas</button>
+                <button class="category-btn" data-category="calcas">Calças</button>
+                <button class="category-btn" data-category="seguranca">Segurança</button>
+                <button class="category-btn" data-category="sapatos">Sapatos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <a href="produtos.html" class="btn btn-outline">Ver Todos os Produtos</a>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="featured-stories">
+        <div class="container">
+            <h2 class="section-title">Destaques & Novidades</h2>
+            <div class="stories-carousel">
+                <div class="story-card">
+                    <div class="story-media">
+                        <img src="./public/students-in-school-uniforms-group-photo-professional.jpg" alt="Uniformes Escolares 2025">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-tag">Novo</span>
+                        <h3 class="story-title">Coleção Escolar 2025</h3>
+                        <p class="story-desc">Novos modelos de uniformes escolares com tecidos mais duráveis e confortáveis.</p>
+                        <a href="produtos.html?cat=escola" class="story-link">Ver Coleção <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-media">
+                        <img src="./public/professional-uniforms-hanging-on-rack--clean-minim.jpg" alt="Uniformes Profissionais">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-tag">Tendência</span>
+                        <h3 class="story-title">Uniformes Corporativos</h3>
+                        <p class="story-desc">Elegância e profissionalismo para sua empresa com bordados personalizados.</p>
+                        <a href="produtos.html?cat=corporativo" class="story-link">Saber Mais <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-media">
+                        <img src="./public/reflective-safety-vest.jpg" alt="Equipamentos de Segurança">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-tag">Segurança</span>
+                        <h3 class="story-title">EPIs Certificados</h3>
+                        <p class="story-desc">Equipamentos de proteção individual com certificação internacional.</p>
+                        <a href="produtos.html?cat=seguranca" class="story-link">Explorar <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Fazer o Seu Pedido?</h2>
+                <p>Entre em contato connosco via WhatsApp ou faça o seu pedido online</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/258848304000" class="btn btn-primary" target="_blank">
+                        <i class="ri-whatsapp-line"></i>
+                        Contactar via WhatsApp
+                    </a>
+                    <a href="fazer-pedido.html" class="btn btn-secondary">Fazer Pedido Online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="./images/logos/logo.png" alt="ZERO GRAUS" class="footer-logo">
+                    <p>Uniformes escolares de qualidade para o futuro de Moçambique.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="fazer-pedido.html">Fazer Pedido</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="ri-phone-line"></i> +258 848304000</li>
+                        <li><i class="ri-mail-line"></i> zguniforme@gmail.com</li>
+                        <li><i class="ri-map-pin-line"></i> Maputo, Moçambique</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="https://wa.me/258848304000" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ZERO GRAUS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" id="chatToggle">
+            <i class="ri-message-3-line"></i>
+        </button>
+        
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Assistência ZERO GRAUS</h3>
+                <button class="chat-close" id="chatClose">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    <p>Olá! 👋 Como posso ajudá-lo hoje?</p>
+                    <div class="chat-options">
+                        <button class="chat-option" data-action="produtos">Ver Produtos</button>
+                        <button class="chat-option" data-action="pedido">Fazer Pedido</button>
+                        <button class="chat-option" data-action="bordados">Bordados/Estampagens</button>
+                        <button class="chat-option" data-action="whatsapp">Falar no WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+                <button id="chatSend">
+                    <i class="ri-send-plane-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Seu Pedido</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        
+        <div class="cart-body" id="cartBody">
+            <!-- Cart items will be loaded by JS -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">0 MT</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">
+                <i class="ri-whatsapp-line"></i>
+                Enviar Pedido via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Scripts Inline -->
+    <script>
+      // Products database (real images from public folder)
+      const products = [
+        { id: 1, name: 'Camisa Escolar Branca', category: 'camisas', price: 450, image: './public/school-uniform-white-shirt-child.jpg', badge: 'Novo' },
+        { id: 2, name: 'Camisa Escolar Azul', category: 'camisas', price: 450, image: './public/school-uniform-blue-shirt-teen.jpg', badge: '' },
+        { id: 3, name: 'Polo Escolar', category: 'camisetas', price: 380, image: './public/school-polo-shirt-uniform.jpg', badge: '' },
+        { id: 4, name: 'Calça Escolar Preta', category: 'calcas', price: 520, image: './public/school-uniform-black-pants.jpg', badge: '' },
+        { id: 5, name: 'Saia Escolar', category: 'calcas', price: 480, image: './public/school-uniform-skirt.jpg', badge: '' },
+        { id: 6, name: 'Sapatos Escolares', category: 'sapatos', price: 650, image: './public/school-shoes-black.jpg', badge: '' },
+        { id: 7, name: 'Camisa Social Branca', category: 'camisas', price: 680, image: './public/white-dress-shirt-professional.jpg', badge: '' },
+        { id: 8, name: 'Camisa Social Azul', category: 'camisas', price: 680, image: './public/blue-dress-shirt-professional.jpg', badge: '' },
+        { id: 9, name: 'Polo Profissional Preta', category: 'camisetas', price: 550, image: './public/black-polo-shirt-professional.jpg', badge: '' },
+        { id: 10, name: 'Polo Profissional Branca', category: 'camisetas', price: 550, image: './public/white-polo-shirt-professional.jpg', badge: '' },
+        { id: 11, name: 'Calça Social Preta', category: 'calcas', price: 750, image: './public/black-dress-pants-professional.jpg', badge: '' },
+        { id: 12, name: 'Calça Social Cinza', category: 'calcas', price: 750, image: './public/gray-dress-pants-professional.jpg', badge: '' },
+        { id: 13, name: 'Colete Refletivo', category: 'seguranca', price: 320, image: './public/reflective-safety-vest.jpg', badge: 'Popular' },
+        { id: 14, name: 'Capacete de Segurança', category: 'seguranca', price: 280, image: './public/safety-helmet-hard-hat.jpg', badge: '' },
+        { id: 15, name: 'Botas de Segurança', category: 'sapatos', price: 980, image: './public/safety-work-boots-steel-toe.jpg', badge: '' },
+        { id: 16, name: 'Luvas de Trabalho', category: 'seguranca', price: 180, image: './public/safety-work-gloves.jpg', badge: '' },
+      ];
+
+      // Load products
+      (function(){
+        const grid = document.getElementById('productsGrid');
+        if(!grid) return;
+        
+        let currentFilter = 'todos';
+        
+        const renderProducts = (filter = 'todos') => {
+          const filtered = filter === 'todos' ? products : products.filter(p => p.category === filter);
+          grid.innerHTML = filtered.slice(0, 8).map(p => `
+            <div class="product-card" data-id="${p.id}">
+              <div class="product-media">
+                ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+                <img src="${p.image}" alt="${p.name}" loading="lazy">
+              </div>
+              <div class="product-info">
+                <p class="product-category">${getCategoryName(p.category)}</p>
+                <h3 class="product-name">${p.name}</h3>
+                <p class="price">${p.price} MT</p>
+              </div>
+              <button class="btn btn-primary quick-view">Ver Detalhes</button>
+            </div>
+          `).join('');
+        };
+        
+        const getCategoryName = (cat) => {
+          const names = { camisas: 'Camisas', camisetas: 'Camisetas', calcas: 'Calças', seguranca: 'Segurança', sapatos: 'Sapatos' };
+          return names[cat] || cat;
+        };
+        
+        // Category filter
+        document.querySelectorAll('.category-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const cat = btn.dataset.category;
+            renderProducts(cat);
+          });
+        });
+        
+        renderProducts();
+      })();
+
+      // Mobile drawer
+      (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const drawer = document.createElement('div');
+        const overlay = document.createElement('div');
+        drawer.className = 'mobile-drawer';
+        overlay.className = 'drawer-overlay';
+        drawer.innerHTML = `
+          <nav>
+            <a class="mobile-link" href="index.html">Início</a>
+            <a class="mobile-link" href="produtos.html">Produtos</a>
+            <a class="mobile-link" href="fazer-pedido.html">Fazer Pedido</a>
+            <a class="mobile-link" href="contato.html">Contato</a>
+          </nav>`;
+        document.body.appendChild(drawer);
+        document.body.appendChild(overlay);
+        const close = ()=>{ drawer.classList.remove('open'); overlay.classList.remove('open'); };
+        overlay.addEventListener('click', close);
+        btn && btn.addEventListener('click', ()=>{ drawer.classList.add('open'); overlay.classList.add('open'); });
+        drawer.addEventListener('click', (e)=>{ if(e.target.closest('a')) close(); });
+      })();
+
+      // Hero carousel
+      (function(){
+        const slides = Array.from(document.querySelectorAll('#heroCarousel .carousel-slide'));
+        const dotsWrap = document.getElementById('carouselDots');
+        const prev = document.getElementById('carouselPrev');
+        const next = document.getElementById('carouselNext');
+        if(!slides.length || !dotsWrap) return;
+        let i = 0; let timer;
+        const render = ()=>{
+          slides.forEach((s,idx)=> s.classList.toggle('active', idx===i));
+          dotsWrap.querySelectorAll('button').forEach((d,idx)=> d.classList.toggle('active', idx===i));
+        };
+        const go = (n)=>{ i = (n+slides.length)%slides.length; render(); restart(); };
+        const restart = ()=>{ if(timer) clearInterval(timer); timer = setInterval(()=> go(i+1), 5000); };
+        dotsWrap.innerHTML = slides.map((_,idx)=>`<button aria-label="Ir para slide ${idx+1}"></button>`).join('');
+        dotsWrap.addEventListener('click', (e)=>{ const idx = [...dotsWrap.children].indexOf(e.target); if(idx>-1) go(idx); });
+        prev && prev.addEventListener('click', ()=> go(i-1));
+        next && next.addEventListener('click', ()=> go(i+1));
+        render(); restart();
+      })();
+
+      // Chat widget toggle
+      (function(){
+        const toggle = document.getElementById('chatToggle');
+        const win = document.getElementById('chatWindow');
+        const closeBtn = document.getElementById('chatClose');
+        toggle && toggle.addEventListener('click', ()=> win && win.classList.toggle('open'));
+        closeBtn && closeBtn.addEventListener('click', ()=> win && win.classList.remove('open'));
+      })();
+
+      // Cart sidebar toggle
+      (function(){
+        const openBtn = document.getElementById('cartBtn');
+        const sidebar = document.getElementById('cartSidebar');
+        const closeBtn = document.getElementById('cartClose');
+        const overlay = document.getElementById('cartOverlay');
+        const open = ()=>{ sidebar && sidebar.classList.add('open'); overlay && overlay.classList.add('open'); };
+        const close = ()=>{ sidebar && sidebar.classList.remove('open'); overlay && overlay.classList.remove('open'); };
+        openBtn && openBtn.addEventListener('click', open);
+        closeBtn && closeBtn.addEventListener('click', close);
+        overlay && overlay.addEventListener('click', close);
+      })();
+    </script>
+    <script src="./js/advanced-features.js"></script>
+</body>
+</html>

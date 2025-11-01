@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com ZERO GRAUS. Telefone, email e localização em Maputo, Moçambique.">
+    <title>Contato - ZERO GRAUS</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
+    <link rel="stylesheet" href="./css/contato.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="./images/logos/logo.png" alt="ZERO GRAUS Logo" class="logo-img">
+                </a>
+                
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="produtos.html" class="nav-link">Produtos</a>
+                    <a href="fazer-pedido.html" class="nav-link">Fazer Pedido</a>
+                    <a href="contato.html" class="nav-link active">Contato</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="ri-sun-line"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p class="subtitle">Estamos prontos para atender você. Escolha o canal de sua preferência e fale conosco!</p>
+            
+            <div class="hero-badges">
+                <div class="badge-item">
+                    <i class="ri-time-line"></i>
+                    <span>Resposta em 24h</span>
+                </div>
+                <div class="badge-item">
+                    <i class="ri-customer-service-line"></i>
+                    <span>Suporte Dedicado</span>
+                </div>
+                <div class="badge-item">
+                    <i class="ri-shield-check-line"></i>
+                    <span>100% Confiável</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Cards -->
+                <div>
+                    <div class="contact-cards-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <h3>Telefone</h3>
+                            <p>Ligue para nós diretamente</p>
+                            <p style="font-size: 20px; font-weight: 700; color: var(--text); margin: 16px 0;">+258 848304000</p>
+                            <a href="tel:+258848304000" class="btn btn-outline">
+                                <i class="ri-phone-line"></i>
+                                Ligar Agora
+                            </a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="ri-whatsapp-line"></i>
+                            </div>
+                            <h3>WhatsApp</h3>
+                            <p>Envie mensagem instantânea</p>
+                            <p style="font-size: 20px; font-weight: 700; color: var(--text); margin: 16px 0;">+258 848304000</p>
+                            <a href="https://wa.me/258848304000" class="btn btn-primary" target="_blank">
+                                <i class="ri-whatsapp-line"></i>
+                                Abrir WhatsApp
+                            </a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>Envie um email para nós</p>
+                            <p style="font-size: 18px; font-weight: 700; color: var(--text); margin: 16px 0;">zguniforme@gmail.com</p>
+                            <a href="mailto:zguniforme@gmail.com" class="btn btn-outline">
+                                <i class="ri-mail-line"></i>
+                                Enviar Email
+                            </a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <h3>Localização</h3>
+                            <p>Visite nossa loja física</p>
+                            <p style="font-size: 18px; font-weight: 700; color: var(--text); margin: 16px 0;">N4, Maputo, Moçambique</p>
+                            <a href="#map" class="btn btn-outline">
+                                <i class="ri-map-pin-line"></i>
+                                Ver no Mapa
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Hours -->
+                    <div class="business-hours">
+                        <h3>
+                            <i class="ri-time-line"></i>
+                            Horário de Funcionamento
+                        </h3>
+                        <ul class="hours-list">
+                            <li class="hours-item">
+                                <span class="hours-day">Segunda a Sexta</span>
+                                <span class="hours-time">8:00 - 17:00</span>
+                            </li>
+                            <li class="hours-item">
+                                <span class="hours-day">Sábado</span>
+                                <span class="hours-time">9:00 - 13:00</span>
+                            </li>
+                            <li class="hours-item closed">
+                                <span class="hours-day">Domingo</span>
+                                <span class="hours-time">Fechado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <div class="form-header">
+                        <h2 class="form-title">
+                            <i class="ri-message-3-line"></i>
+                            Envie uma Mensagem
+                        </h2>
+                        <p class="form-description">Preencha o formulário e entraremos em contato em breve</p>
+                    </div>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <input type="text" id="name" name="name" class="has-icon" required minlength="3" placeholder="Digite seu nome completo">
+                                <i class="ri-user-line input-icon"></i>
+                            </div>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="email" name="email" class="has-icon" required placeholder="seu@email.com">
+                                    <i class="ri-mail-line input-icon"></i>
+                                </div>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <div class="input-wrapper">
+                                    <input type="tel" id="phone" name="phone" class="has-icon" placeholder="+258 84 123 4567" pattern="[+]?[0-9]{9,15}">
+                                    <i class="ri-phone-line input-icon"></i>
+                                </div>
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto <span class="required">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto...</option>
+                                <option value="pedido">Pedido de Uniformes</option>
+                                <option value="orcamento">Pedido de Orçamento</option>
+                                <option value="bordado">Bordados/Estampagens</option>
+                                <option value="duvida">Dúvida sobre Produtos</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required minlength="10" maxlength="500" placeholder="Digite sua mensagem aqui..."></textarea>
+                            <span class="form-error" id="messageError"></span>
+                            <span class="char-counter"><span id="charCount">0</span>/500</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                            <span class="btn-text">
+                                <i class="ri-send-plane-fill"></i>
+                                Enviar Mensagem
+                            </span>
+                            <span class="btn-loader" style="display: none;">
+                                <i class="ri-loader-4-line spinner"></i>
+                                Enviando...
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <!-- Success Animation -->
+                    <div class="success-animation" id="successAnimation">
+                        <div class="success-icon-large">
+                            <i class="ri-check-line"></i>
+                        </div>
+                        <h3>Mensagem Enviada!</h3>
+                        <p>Obrigado pelo contato. Responderemos em breve via WhatsApp ou email.</p>
+                        <button type="button" class="btn btn-primary" onclick="resetContactForm()">
+                            Enviar Nova Mensagem
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="map-header">
+                <h2>Nossa Localização</h2>
+                <p>Visite-nos em Maputo, Moçambique</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.8537!2d32.5731!3d-25.9655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU3JzU1LjgiUyAzMsKwMzQnMjMuMiJF!5e0!3m2!1spt-PT!2smz!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Encontre respostas rápidas para as dúvidas mais comuns</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Qual o prazo de entrega dos uniformes?</span>
+                        <i class="ri-arrow-down-s-line faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            O prazo de entrega varia de acordo com a quantidade e personalização. Em média, entregamos em 7 a 15 dias úteis após a confirmação do pedido.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Vocês fazem bordados personalizados?</span>
+                        <i class="ri-arrow-down-s-line faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sim! Oferecemos serviços de bordados e estampagens personalizadas. Entre em contato para solicitar um orçamento específico.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Qual é o pedido mínimo?</span>
+                        <i class="ri-arrow-down-s-line faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Não temos pedido mínimo. Atendemos desde 1 peça até grandes quantidades para escolas e instituições.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Fazem entrega em todo Moçambique?</span>
+                        <i class="ri-arrow-down-s-line faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sim, fazemos entregas em todo território nacional. O custo e prazo variam conforme a localização.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como posso fazer um orçamento?</span>
+                        <i class="ri-arrow-down-s-line faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Você pode solicitar um orçamento através do WhatsApp, email ou preenchendo o formulário de contato. Responderemos em até 24 horas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="./images/logos/logo.png" alt="ZERO GRAUS" class="footer-logo">
+                    <p>Uniformes escolares de qualidade para o futuro de Moçambique.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="fazer-pedido.html">Fazer Pedido</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="ri-phone-line"></i> +258 848304000</li>
+                        <li><i class="ri-mail-line"></i> zguniforme@gmail.com</li>
+                        <li><i class="ri-map-pin-line"></i> Maputo, Moçambique</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="https://wa.me/258848304000" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ZERO GRAUS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" id="chatToggle">
+            <i class="ri-message-3-line"></i>
+        </button>
+        
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Assistência ZERO GRAUS</h3>
+                <button class="chat-close" id="chatClose">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    <p>Olá! 👋 Como posso ajudá-lo hoje?</p>
+                    <div class="chat-options">
+                        <button class="chat-option" data-action="produtos">Ver Produtos</button>
+                        <button class="chat-option" data-action="pedido">Fazer Pedido</button>
+                        <button class="chat-option" data-action="bordados">Bordados/Estampagens</button>
+                        <button class="chat-option" data-action="whatsapp">Falar no WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+                <button id="chatSend">
+                    <i class="ri-send-plane-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/whatsapp.js"></script>
+    <script src="./js/contato.js"></script>
+    <script src="./js/advanced-features.js"></script>
+</body>
+</html>
